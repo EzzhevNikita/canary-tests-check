@@ -1,6 +1,7 @@
 steps:
   - task: CmdLine@2
-    inputs: 'chmod +x src/cmdLine/scripts/send-signal.sh'
+    inputs: 
+      script: 'chmod +x src/cmdLine/scripts/send-signal.sh'
   - task: CmdLine@2
     displayName: 'Check sending signals to child process'
     inputs:
