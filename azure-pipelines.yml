@@ -1,6 +1,5 @@
 trigger:
 - master
 
-steps:
-- template: bash.yml
-- template: cmdLine.yml
+extends:
+    template: bash.yml
