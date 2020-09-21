@@ -2,4 +2,4 @@ trigger:
 - master
 
 extends:
-    template: CmdLine.yml
+    template: cmdLine.yml
