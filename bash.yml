@@ -1,0 +1,35 @@
+jobs:
+- job: 'Ubuntu1604'
+  pool: $[ coalesce(variables.ubuntu1604, 'Hosted Ubuntu 1604') ]
+  condition: and(succeeded(),  contains(variables.targetPools, 'Hosted Ubuntu 1604'))
+  steps:
+  - template: src/bash/templates/basic-execution.yml
+  - template: src/bash/templates/ubuntu-specific-signals.yml
+
+- job: 'Ubuntu1804'
+  pool: $[ coalesce(variables.ubuntu1804, 'Hosted Ubuntu 1804') ]
+  condition: and(succeeded(),  contains(variables.targetPools, 'Hosted Ubuntu 1804'))
+  steps:
+  - template: src/bash/templates/basic-execution.yml
+  - template: src/bash/templates/ubuntu-specific-case.yml
+
+- job: 'Ubuntu2004'
+  pool:
+    name: 'Azure Pipelines'
+    vmImage: 'ubuntu-20.04'
+  condition: and(succeeded(),  contains(variables.targetPools, 'Hosted Ubuntu 2004'))
+  steps:
+  - template: src/bash/templates/basic-execution.yml
+  - template: src/bash/templates/ubuntu-specific-case.yml
+
+- job: 'HostedVS2017'
+  pool: $[ coalesce(variables.vs2017, 'Hosted VS2017') ]
+  condition: and(succeeded(),  contains(variables.targetPools, 'Hosted VS2017'))
+  steps:
+  - template: src/bash/templates/basic-execution.yml
+
+- job: 'HostedWindows2019withVS2019'
+  pool: $[ coalesce(variables.vs2019, 'Hosted Windows 2019 with VS2019') ]
+  condition: and(succeeded(),  contains(variables.targetPools, 'Hosted Windows 2019 with VS2019'))
+  steps:
+  - template: src/bash/templates/basic-execution.yml

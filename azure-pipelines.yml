@@ -1,0 +1,6 @@
+trigger:
+- master
+
+steps:
+- template: bash.yml
+- template: cmdLine.yml
