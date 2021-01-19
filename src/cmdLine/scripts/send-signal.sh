@@ -10,6 +10,7 @@ counter=0;
 
 while true;
 do
+  while :; do echo 'Hit CTRL+C'; sleep 1; done
   if [[ $counter -eq 10 ]];
   then
     ps -ef | grep 'CmdLine_' | grep -v grep | awk '{print $2}' | xargs -r kill -2
