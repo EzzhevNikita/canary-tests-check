@@ -36,6 +36,6 @@ jobs:
     name: 'Azure Pipelines'
     vmImage: 'windows-latest'
   steps:
-  - template: src/bash/templates/basic-execution.yml
-  - template: src/bash/templates/ubuntu-specific-case.yml
+  - template: ./src/bash/templates/basic-execution.yml
+  - template: ./src/bash/templates/ubuntu-specific-case.yml
   
