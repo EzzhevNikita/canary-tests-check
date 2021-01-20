@@ -23,7 +23,7 @@ jobs:
   - template: src/cmdLine/templates/basic-execution.yml
   - template: src/cmdLine/templates/ubuntu-specific-case.yml
 
-- job: 'Ubuntu1604-old'
+- job: 'Ubuntu1604_old'
   pool:
     name: 'Azure Pipelines'
     vmImage: 'ubuntu-16.04'
@@ -31,7 +31,7 @@ jobs:
   - template: src/bash/templates/basic-execution.yml
   - template: src/bash/templates/ubuntu-specific-case-old.yml
 
-- job: 'Ubuntu1804-old'
+- job: 'Ubuntu1804_old'
   pool:
     name: 'Azure Pipelines'
     vmImage: 'ubuntu-18.04' 
@@ -39,7 +39,7 @@ jobs:
   - template: src/bash/templates/basic-execution.yml
   - template: src/bash/templates/ubuntu-specific-case-old.yml
 
-- job: 'Ubuntu2004-old'
+- job: 'Ubuntu2004_old'
   pool:
     name: 'Azure Pipelines'
     vmImage: 'ubuntu-20.04'
