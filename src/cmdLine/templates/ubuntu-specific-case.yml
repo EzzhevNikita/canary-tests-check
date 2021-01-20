@@ -5,5 +5,4 @@ steps:
   - task: CmdLine@2
     displayName: 'Check sending signals to child process'
     inputs:
-      sendCancellationToChildProcess: true
       script: src/cmdLine/scripts/send-signal.sh
