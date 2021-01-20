@@ -10,15 +10,15 @@
 
 while true;
 do
-  if [[ $counter -eq 10 ]];
-  then
-    ps -ef | grep 'CmdLine_' | grep -v grep | awk '{print $2}' | xargs -r kill -2
-  fi
+  #if [[ $counter -eq 10 ]];
+  #then
+  #  ps -ef | grep 'CmdLine_' | grep -v grep | awk '{print $2}' | xargs -r kill -2
+  #fi
   
-  if [[ $counter -eq 20 ]];
-  then
-    exit 1
-  fi
+  #if [[ $counter -eq 20 ]];
+  #then
+  #  exit 1
+  #fi
   
   sleep 1;
   ((counter++))
