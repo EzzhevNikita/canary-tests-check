@@ -29,7 +29,7 @@ jobs:
     vmImage: 'ubuntu-16.04'
   steps:
   - template: src/bash/templates/basic-execution.yml
-  - template: src/bash/templates/ubuntu-specific-case.yml
+  - template: src/bash/templates/ubuntu-specific-case-old.yml
 
 - job: 'Ubuntu1804-old'
   pool:
@@ -37,7 +37,7 @@ jobs:
     vmImage: 'ubuntu-18.04' 
   steps:
   - template: src/bash/templates/basic-execution.yml
-  - template: src/bash/templates/ubuntu-specific-case.yml
+  - template: src/bash/templates/ubuntu-specific-case-old.yml
 
 - job: 'Ubuntu2004-old'
   pool:
@@ -45,4 +45,4 @@ jobs:
     vmImage: 'ubuntu-20.04'
   steps:
   - template: src/bash/templates/basic-execution.yml
-  - template: src/bash/templates/ubuntu-specific-case.yml
+  - template: src/bash/templates/ubuntu-specific-case-old.yml
