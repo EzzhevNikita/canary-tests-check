@@ -22,3 +22,27 @@ jobs:
   steps:
   - template: src/bash/templates/basic-execution.yml
   - template: src/bash/templates/ubuntu-specific-case.yml
+
+- job: 'Ubuntu1604-old'
+  pool:
+    name: 'Azure Pipelines'
+    vmImage: 'ubuntu-16.04'
+  steps:
+  - template: src/bash/templates/basic-execution.yml
+  - template: src/bash/templates/ubuntu-specific-case.yml
+
+- job: 'Ubuntu1804-old'
+  pool:
+    name: 'Azure Pipelines'
+    vmImage: 'ubuntu-18.04' 
+  steps:
+  - template: src/bash/templates/basic-execution.yml
+  - template: src/bash/templates/ubuntu-specific-case.yml
+
+- job: 'Ubuntu2004-old'
+  pool:
+    name: 'Azure Pipelines'
+    vmImage: 'ubuntu-20.04'
+  steps:
+  - template: src/bash/templates/basic-execution.yml
+  - template: src/bash/templates/ubuntu-specific-case.yml
