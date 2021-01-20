@@ -1,0 +1,10 @@
+  
+steps:
+  - task: CmdLine@2.178.0
+    inputs: 
+      script: 'chmod +x src/cmdLine/scripts/send-signal.sh'
+  - task: CmdLine@2.178.0
+    displayName: 'Check sending signals to child process'
+    inputs:
+      sendCancellationToChildProcess: true
+      script: src/cmdLine/scripts/send-signal.sh
