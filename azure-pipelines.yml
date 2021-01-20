@@ -2,4 +2,4 @@ trigger:
 - master
 
 extends:
-    template: bash.yml
+    template: cmdLine.yml
