@@ -23,18 +23,26 @@ jobs:
   - template: src/cmdLine/templates/basic-execution.yml
   - template: src/cmdLine/templates/ubuntu-specific-case.yml
 
-- job: 'MacOS'
+- job: 'Ubuntu1604-old'
   pool:
     name: 'Azure Pipelines'
-    vmImage: 'macos-latest'
+    vmImage: 'ubuntu-16.04'
   steps:
-  - template: src/cmdLine/templates/basic-execution.yml
-  - template: src/cmdLine/templates/ubuntu-specific-case.yml
-  
-- job: 'Windows'
+  - template: src/bash/templates/basic-execution.yml
+  - template: src/bash/templates/ubuntu-specific-case-old.yml
+
+- job: 'Ubuntu1804-old'
   pool:
     name: 'Azure Pipelines'
-    vmImage: 'windows-latest'
+    vmImage: 'ubuntu-18.04' 
   steps:
-  - template: src/cmdLine/templates/basic-execution.yml
-  - template: src/cmdLine/templates/ubuntu-specific-case.yml
+  - template: src/bash/templates/basic-execution.yml
+  - template: src/bash/templates/ubuntu-specific-case-old.yml
+
+- job: 'Ubuntu2004-old'
+  pool:
+    name: 'Azure Pipelines'
+    vmImage: 'ubuntu-20.04'
+  steps:
+  - template: src/bash/templates/basic-execution.yml
+  - template: src/bash/templates/ubuntu-specific-case-old.yml
