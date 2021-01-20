@@ -1,11 +1,11 @@
 #!/bin/bash
  
-signal_caught_sigterm() {
-  echo "Script cancellation by SIGTERM...."
-  exit 0
-}
+# signal_caught_sigterm() {
+#  echo "Script cancellation by SIGTERM...."
+#  exit 0
+#}
 
-trap signal_caught_sigterm SIGTERM
+# trap signal_caught_sigterm SIGTERM
 counter=0;
 
 while true;
